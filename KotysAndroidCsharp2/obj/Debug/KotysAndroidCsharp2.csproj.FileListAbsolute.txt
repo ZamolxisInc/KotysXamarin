@@ -1,0 +1,17 @@
+D:\Gabi\projects\KotysAndroidCsharp2\KotysAndroidCsharp2\bin\Debug\KotysAndroidCsharp2.dll
+D:\Gabi\projects\KotysAndroidCsharp2\KotysAndroidCsharp2\bin\Debug\KotysAndroidCsharp2.pdb
+D:\Gabi\projects\KotysAndroidCsharp2\KotysAndroidCsharp2\bin\Debug\KotysAndroidCsharp2.KotysAndroidCsharp2.apk
+D:\Gabi\projects\KotysAndroidCsharp2\KotysAndroidCsharp2\bin\Debug\KotysAndroidCsharp2.KotysAndroidCsharp2-Signed.apk
+D:\Gabi\projects\KotysAndroidCsharp2\KotysAndroidCsharp2\obj\Debug\KotysAndroidCsharp2.dll
+D:\Gabi\projects\KotysAndroidCsharp2\KotysAndroidCsharp2\obj\Debug\KotysAndroidCsharp2.pdb
+D:\Gabi\projects\KotysAndroidCsharp2\KotysAndroidCsharp2\obj\Debug\android\bin\KotysAndroidCsharp2.KotysAndroidCsharp2.apk
+D:\Gabi\projects\KotysAndroidCsharp2\KotysAndroidCsharp2\obj\Debug\res\layout\main.xml
+D:\Gabi\projects\KotysAndroidCsharp2\KotysAndroidCsharp2\obj\Debug\res\values\strings.xml
+D:\Gabi\projects\KotysAndroidCsharp2\KotysAndroidCsharp2\obj\Debug\res\drawable\icon.png
+D:\Gabi\projects\KotysAndroidCsharp2\KotysAndroidCsharp2\obj\Debug\R.cs.flag
+D:\Gabi\projects\KotysAndroidCsharp2\KotysAndroidCsharp2\obj\Debug\uploadflags.txt
+D:\Gabi\projects\KotysAndroidCsharp2\KotysAndroidCsharp2\obj\Debug\KotysAndroidCsharp2.csprojResolveAssemblyReference.cache
+D:\Gabi\projects\KotysAndroidCsharp2\KotysAndroidCsharp2\obj\Debug\res\layout\loggedin.xml
+D:\Gabi\projects\KotysAndroidCsharp2\KotysAndroidCsharp2\obj\Debug\res\layout\regdev.xml
+D:\Gabi\projects\KotysAndroidCsharp2\KotysAndroidCsharp2\obj\Debug\KotysAndroidCsharp2.dll.mdb
+D:\Gabi\projects\KotysAndroidCsharp2\KotysAndroidCsharp2\bin\Debug\KotysAndroidCsharp2.dll.mdb

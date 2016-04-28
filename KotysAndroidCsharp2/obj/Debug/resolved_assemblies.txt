@@ -1,0 +1,9 @@
+D:\Gabi\projects\KotysAndroidCsharp2\KotysAndroidCsharp2\obj\Debug\assemblies\KotysAndroidCsharp2.dll
+D:\Gabi\projects\KotysAndroidCsharp2\KotysAndroidCsharp2\obj\Debug\assemblies\Mono.Android.dll
+D:\Gabi\projects\KotysAndroidCsharp2\KotysAndroidCsharp2\obj\Debug\assemblies\mscorlib.dll
+D:\Gabi\projects\KotysAndroidCsharp2\KotysAndroidCsharp2\obj\Debug\assemblies\System.Core.dll
+D:\Gabi\projects\KotysAndroidCsharp2\KotysAndroidCsharp2\obj\Debug\assemblies\System.dll
+D:\Gabi\projects\KotysAndroidCsharp2\KotysAndroidCsharp2\obj\Debug\assemblies\System.Xml.dll
+D:\Gabi\projects\KotysAndroidCsharp2\KotysAndroidCsharp2\obj\Debug\assemblies\System.Xml.Linq.dll
+D:\Gabi\projects\KotysAndroidCsharp2\KotysAndroidCsharp2\obj\Debug\assemblies\System.Runtime.Serialization.dll
+D:\Gabi\projects\KotysAndroidCsharp2\KotysAndroidCsharp2\obj\Debug\assemblies\System.ServiceModel.Internals.dll
