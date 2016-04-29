@@ -3,6 +3,7 @@ using System.Net;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.IO;
 
 using Android.App;
 using Android.Content;
@@ -15,7 +16,7 @@ namespace KotysAndroidCsharp2
 {
     class API
     {
-        public string APIurl = "http://192.168.1.2/machines/api/";
+        public string APIurl = "http://192.168.1.7/machines/api/";
 
         public int timer = 5000;
 
@@ -68,6 +69,7 @@ namespace KotysAndroidCsharp2
 
         public string GetIp()
         {
+            string dbPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "settingsk.db3");
            
             WebClient wc = new WebClient();
             string ip = wc.DownloadString("https://api.ipify.org");
