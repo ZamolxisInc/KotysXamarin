@@ -1,1 +1,49 @@
-<LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:minWidth="25px" android:minHeight="25px" xmlns:android="http://schemas.android.com/apk/res/android"><TextView android:text="Register a new device" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/textView1" /><TextView android:text="id" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/textView1" /><EditText android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/editTextID" /><TextView android:text="name" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/textView1" /><EditText android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/editTextNAME" /><TextView android:text="username" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/textView1" /><EditText android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/editTextUSERNAME" /><Button android:text="Register" android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/buttonRegister" /></LinearLayout>
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="25px"
+    android:minHeight="25px">
+    <TextView
+        android:text="Register a new device"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView1" />
+    <TextView
+        android:text="id"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView1" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextID" />
+    <TextView
+        android:text="name"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView1" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextNAME" />
+    <TextView
+        android:text="username"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView1" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextUSERNAME" />
+    <Button
+        android:text="Register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonRegister" />
+</LinearLayout>
