@@ -12,6 +12,7 @@ namespace KotysAndroidCsharp2
     [Activity(Label = "KotysClient", MainLauncher = true, Icon = "@drawable/icon")]
     public class MainActivity : Activity
     {
+        
         public bool loggedIn = false;
         public bool active = true;
         public string devID = "devm02";
@@ -25,6 +26,7 @@ namespace KotysAndroidCsharp2
 
         protected override void OnCreate(Bundle bundle)
         {
+            StartService(new Intent(this, typeof(KotysService)));
             base.OnCreate(bundle);
 
             SetContentView(Resource.Layout.Main);

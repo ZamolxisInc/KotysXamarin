@@ -16,7 +16,7 @@ namespace KotysAndroidCsharp2
 {
     class API
     {
-        public string APIurl = "http://192.168.1.7/machines/api/";
+        public string APIurl = "http://192.168.1.3/machines/api/";
 
         public int timer = 5000;
 
@@ -66,6 +66,28 @@ namespace KotysAndroidCsharp2
             }
         }
 
+       public  void SendLastSeen(string devID)
+        {
+            //var nMgr = (NotificationManager)GetSystemService(NotificationService);
+            //var notification = new Notification(Resource.Drawable.Icon, "Message from demo service");
+            //var pendingIntent = PendingIntent.GetActivity(this, 0, new Intent(this, typeof(MainActivity)), 0);
+            //notification.SetLatestEventInfo(this, "Demo Service Notification", "Message from demo service", pendingIntent);
+            //nMgr.Notify(0, notification);
+
+            DateTime now = DateTime.Now;
+            WebClient wc = new WebClient();
+            wc.DownloadString(APIurl + "updateLastSeen.php?t1=" + devID + "&t2=" + now); // TREBUIE TESTAT
+            //TREBUIE INITIALIZAT DEVID in onStartCommand
+
+        }
+
+      public void markItAsDone(string ident)
+       {
+           // apeleaza api si marchaza ca DONE 
+
+           WebClient wc = new WebClient();
+           wc.DownloadString(APIurl + "setCommandAsDone.php?t1=" + ident); // TREBUIE TESTAT
+       }
 
         public string GetIp()
         {

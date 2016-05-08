@@ -1,5 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="KotysAndroidCsharp2.KotysAndroidCsharp2" android:versionCode="1" android:versionName="1.0">
-  <uses-sdk android:minSdkVersion="16" />
-  <application android:label="KotysAndroidCsharp2"></application>
-</manifest>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="KotysAndroidCsharp2.KotysAndroidCsharp2" android:versionCode="1" android:versionName="1.0" android:installLocation="auto">
+	<uses-sdk android:minSdkVersion="16" />
+	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+	<application android:label="KotysAndroidCsharp2"></application>
+  <service android:name="kotysservice.KotysService"/>
+	</manifest>

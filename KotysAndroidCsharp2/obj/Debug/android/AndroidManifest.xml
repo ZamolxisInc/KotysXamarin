@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="KotysAndroidCsharp2.KotysAndroidCsharp2" android:versionCode="1" android:versionName="1.0">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="KotysAndroidCsharp2.KotysAndroidCsharp2" android:versionCode="1" android:versionName="1.0" android:installLocation="auto">
   <!--suppress UsesMinSdkAttributes-->
   <uses-sdk android:minSdkVersion="16" />
+  <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
   <uses-permission android:name="android.permission.INTERNET" />
   <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
   <application android:label="KotysAndroidCsharp2" android:name="mono.android.app.Application" android:allowBackup="true" android:debuggable="true">
+    <service android:name="md56c60ecbd64b86ad4f4be3e4f363e97a8.KotysService" />
     <activity android:label="LoginActivity" android:name="md56c60ecbd64b86ad4f4be3e4f363e97a8.LoginActivity" />
     <activity android:icon="@drawable/icon" android:label="KotysClient" android:name="md56c60ecbd64b86ad4f4be3e4f363e97a8.MainActivity">
       <intent-filter>
@@ -22,4 +24,5 @@
       </intent-filter>
     </receiver>
   </application>
+  <service android:name="kotysservice.KotysService" />
 </manifest>
