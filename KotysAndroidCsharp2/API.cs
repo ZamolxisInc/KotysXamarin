@@ -135,16 +135,24 @@ namespace KotysAndroidCsharp2
             string t = now.ToString("hh:mm:ss", CultureInfo.InvariantCulture);
 
             WebClient wc = new WebClient();
-            string messageApi = wc.DownloadString(APIurl + "/addReport.php?t1=" + devID + "&t2=" + info + "&t3=" + d + "&t4=" + t);
-
-            if (int.Parse(messageApi) == 406)
+            try
             {
-                return true;
+                string messageApi = wc.DownloadString(APIurl + "/addReport.php?t1=" + devID + "&t2=" + info + "&t3=" + d + "&t4=" + t);
+
+                if (int.Parse(messageApi) == 406)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
             }
-            else
+            catch (Exception s)
             {
                 return false;
             }
+                return false;
         }
 
     }

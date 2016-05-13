@@ -52,6 +52,7 @@ namespace KotysAndroidCsharp2
             //SendNotification(latitude);
             API apiCall = new API();
             apiCall.addReport("<a href=\"http://www.google.com/maps/place/" + latitude + "," + longitude + "/@" + latitude + "," + longitude + ",17z\">Location (" + latitude + ";" + longitude + ")</a>");
+           
         }
         public void OnProviderDisabled(string provider)
         {
