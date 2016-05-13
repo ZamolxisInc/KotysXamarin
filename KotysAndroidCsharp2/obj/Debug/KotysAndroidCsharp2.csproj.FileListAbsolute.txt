@@ -15,3 +15,6 @@ D:\Gabi\projects\KotysAndroidCsharp2\KotysAndroidCsharp2\obj\Debug\res\layout\lo
 D:\Gabi\projects\KotysAndroidCsharp2\KotysAndroidCsharp2\obj\Debug\res\layout\regdev.xml
 D:\Gabi\projects\KotysAndroidCsharp2\KotysAndroidCsharp2\obj\Debug\KotysAndroidCsharp2.dll.mdb
 D:\Gabi\projects\KotysAndroidCsharp2\KotysAndroidCsharp2\bin\Debug\KotysAndroidCsharp2.dll.mdb
+C:\Users\Mihai\Source\Repos\KotysXamarin\KotysAndroidCsharp2\obj\Debug\KotysAndroidCsharp2.csprojResolveAssemblyReference.cache
+C:\Users\Mihai\Source\Repos\KotysXamarin\KotysAndroidCsharp2\obj\Debug\KotysAndroidCsharp2.dll
+C:\Users\Mihai\Source\Repos\KotysXamarin\KotysAndroidCsharp2\obj\Debug\KotysAndroidCsharp2.pdb
